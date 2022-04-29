@@ -20,7 +20,7 @@ public class MarkdownParseTest {
 		toReturn.add("some-thing.html");
 		
 		try {
-			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file.md"))));
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("test-file.md"))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -32,7 +32,7 @@ public class MarkdownParseTest {
 		toReturn.add("test.html");
 		
 		try {
-			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file2.md"))));
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("test-file2.md"))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -46,7 +46,7 @@ public class MarkdownParseTest {
 		toReturn.add("testing.html");
 		
 		try {
-			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file3.md"))));
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("test-file3.md"))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -56,7 +56,7 @@ public class MarkdownParseTest {
 	public void testMarkdownFileFour(){
 		ArrayList<String> toReturn = new ArrayList<>();
 		try{
-			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file4.md"))));
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("test-file4.md"))));
 		} catch(IOException e){
 			e.printStackTrace();
 		}
@@ -68,7 +68,7 @@ public class MarkdownParseTest {
 		toReturn.add("test-website");
 		toReturn.add("second-test-website");
 		try {
-			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("/Users/dominicfeliton/Documents/GitHub/markdown-parser/test-file4.md"))));
+			assertEquals(toReturn, MarkdownParse.getLinks(Files.readString(Path.of("test-file5.md"))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
