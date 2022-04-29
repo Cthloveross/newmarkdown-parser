@@ -35,6 +35,9 @@ public class MarkdownParse {
 
 
     public static void main(String[] args) throws IOException {
+        if(args.length > 1 || args.length == 0){
+            System.out.println("invalid input");
+        }
         Path fileName = Path.of(args[0]);
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
